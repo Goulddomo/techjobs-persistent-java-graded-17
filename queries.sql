@@ -7,7 +7,7 @@ FROM job;
 
 SELECT name
 FROM employer
-WHERE location = st. louis city;
+WHERE location = "st. louis city";
 
 --Part 3
 
@@ -15,9 +15,9 @@ DROP TABLE job;
 
 --Part 4
 
-SELECT skill.Name
+SELECT *
 FROM skill
-INNER JOIN job
-WHERE (skill.jobs IS NOT null)
+INNER JOIN job ON skill.id = job.id
+WHERE skill.jobs IS NOT NULL
 ORDER BY skill.name ASC;
 
