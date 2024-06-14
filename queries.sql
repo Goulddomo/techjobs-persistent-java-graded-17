@@ -18,6 +18,6 @@ DROP TABLE job;
 SELECT *
 FROM skill
 INNER JOIN job ON skill.id = job.id
-WHERE skill.jobs IS NOT NULL
+WHERE (skill.jobs IS NOT NULL)
 ORDER BY skill.name ASC;
 
